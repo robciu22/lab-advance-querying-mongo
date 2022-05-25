@@ -24,7 +24,7 @@
 
 ### 6. All the companies that don't include the `partners` field.
 
-<!-- {partners: {$exists: false} } -->
+<!-- {partners: {$exists: false} }-->
 
 ### 7. All the companies that have a null type of value on the `category_code` field.
 
@@ -32,11 +32,11 @@
 
 ### 8. All the companies that have at least 100 employees but less than 1000. Retrieve only the `name` and `number of employees` fields.
 
-<!-- Your Code Goes Here -->
+<!-- {$and:[{number_of_employees:{$gte:100}}, {number_of_employees:{$lt:1000}}]}, {name: 1, _id:0, number_of_employees:1} -->
 
 ### 9. Order all the companies by their IPO price in a descending order.
 
-<!-- Your Code Goes Here -->
+<!-- {"acquisition.price_amount": -1} -->
 
 ### 10. Retrieve the 10 companies with most employees, order by the `number of employees`
 
